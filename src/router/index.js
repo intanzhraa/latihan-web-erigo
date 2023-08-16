@@ -2,7 +2,11 @@ import { createWebHistory, createRouter } from "vue-router";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Produk from "../views/Produk.vue";
+import SingleProduct from "../views/SingleProduct.vue";
 import Banner from "../views/Banner.vue";
+import Kontak from "../views/Kontak.vue";
+import Checkout from "../views/Checkout.vue";
+import Chard from "../views/Chard.vue";
 import store from "../store";
 
 const routes = [
@@ -26,7 +30,27 @@ const routes = [
     path: "/",
     name: "Banner",
     component: Banner,
-},
+  },
+  {
+  path: "/singleproduct",
+  name: "SingleProduct",
+  component: SingleProduct,
+  },
+  {
+    path: "/kontak",
+    name: "Kontak",
+    component: Kontak,
+    },
+    {
+      path: "/checkout",
+      name: "Checkout",
+      component: Checkout,
+      },
+      {
+        path: "/chard",
+        name: "Chard",
+        component: Chard,
+        },
 ];
 
 const router = createRouter({

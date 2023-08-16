@@ -63,7 +63,7 @@
                             <div class="relative flex w-full flex-wrap items-stretch">
                                 <input type="password" id="password"
                                     class="relative block flex-auto cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow"
-                                    v-model="password" placeholder="· · · · · " />
+                                    v-model="password" placeholder="83r5^_" />
                             </div>
                         </div>
                         <div class="mb-4">

@@ -49,7 +49,7 @@
                                 atau Username</label>
                             <input type="text"
                                 class="block w-full cursor-text appearance-none rounded-md border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-indigo-500 focus:bg-white focus:text-gray-600 focus:shadow"
-                                id="email" v-model="username" placeholder="Masukan email atau username" autofocus="" />
+                                id="email" v-model="email" placeholder="Masukan email atau username" autofocus="" />
                         </div>
                         <div class="mb-4">
                             <div class="flex justify-between">
@@ -100,7 +100,7 @@ import { mapActions } from 'vuex';
 export default {
     data() {
         return {
-            username: '',
+            email: '',
             password: '',
         };
     },
@@ -108,7 +108,7 @@ export default {
         ...mapActions('auth', ['login']),
         async performLogin() {
             const credentials = {
-                username: this.username,
+                email: this.email,
                 password: this.password,
             };
 

@@ -38,10 +38,10 @@
       </div>
       <div class="w-full flex-col space-y-3 rounded-xl py-4 lg:flex lg:w-80">
         <div class="h-40 overflow-hidden rounded-xl bg-navy-600/60">
-          <img class="mx-auto h-full w-full object-cover" src="https://pbs.twimg.com/media/Fwf2gOsaYAQzyjJ?format=jpg&name=large" alt="" />
+          <img class="mx-auto h-full w-full object-cover" src="https://pbs.twimg.com/media/F2l4AjVaoAAx0Mj?format=jpg&name=small" alt="" />
         </div>
         <div class="h-40 overflow-hidden rounded-xl bg-navy-600/60">
-          <img class="mx-auto h-full w-full object-cover" src="https://pbs.twimg.com/media/FwjN3JpaUAAuD7O?format=jpg&name=large" alt="" />
+          <img class="mx-auto h-full w-full object-cover" src="https://pbs.twimg.com/media/F2wo0UeacAEkHul?format=jpg&name=small" alt="" />
         </div>
         <div class="h-40 overflow-hidden rounded-xl bg-blue-600/60">
           <img class="mx-auto h-full w-full object-cover" src="https://pbs.twimg.com/media/FwjsGyMaAAAnhEk?format=jpg&name=large" alt="" />

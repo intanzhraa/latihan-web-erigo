@@ -8,6 +8,8 @@ import Kontak from "../views/Kontak.vue";
 import Checkout from "../views/Checkout.vue";
 import Chard from "../views/Chard.vue";
 import store from "../store";
+import Merk from "../views/Merk.vue";
+import Kategori from "../views/Kategori.vue";
 
 const routes = [
     {
@@ -25,32 +27,42 @@ const routes = [
       path: "/produk",
       name: "Produk",
       component: Produk,
-  },
-  {
-    path: "/",
-    name: "Banner",
-    component: Banner,
-  },
-  {
-  path: "/singleproduct",
-  name: "SingleProduct",
-  component: SingleProduct,
-  },
-  {
-    path: "/kontak",
-    name: "Kontak",
-    component: Kontak,
+    },
+    {
+      path: "/",
+      name: "Banner",
+      component: Banner,
+    },
+    {
+      path: "/singleproduct",
+      name: "SingleProduct",
+      component: SingleProduct,
+    },
+    {
+      path: "/kontak",
+      name: "Kontak",
+      component: Kontak,
     },
     {
       path: "/checkout",
       name: "Checkout",
       component: Checkout,
-      },
-      {
-        path: "/chard",
-        name: "Chard",
-        component: Chard,
-        },
+    },
+    {
+      path: "/chard",
+      name: "Chard",
+      component: Chard,
+    },
+    {
+      path: "/merk",
+      name: "Merk",
+      component: Merk,
+    },
+    {
+      path: "/kategori",
+      name: "Kategori",
+      component: Kategori,
+    },
 ];
 
 const router = createRouter({

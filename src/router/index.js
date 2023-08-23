@@ -10,6 +10,9 @@ import Chard from "../views/Chard.vue";
 import store from "../store";
 import Merk from "../views/Merk.vue";
 import Kategori from "../views/Kategori.vue";
+import Product from "../views/Product.vue";
+import SingleProduct2 from "../views/SingleProduct2.vue";
+import Profil from "../views/Profil.vue";
 
 const routes = [
     {
@@ -22,6 +25,7 @@ const routes = [
         path: "/register",
         name: "Register",
         component: Register,
+        meta: { requiresGuest: true},
     },
     {
       path: "/produk",
@@ -62,6 +66,21 @@ const routes = [
       path: "/kategori",
       name: "Kategori",
       component: Kategori,
+    },
+    {
+      path: "/product",
+      name: "Product",
+      component: Product,
+    },
+    {
+      path: "/singleproduct/:product",
+      name: "SingleProduct2",
+      component: SingleProduct2,
+    },
+    {
+      path: "/profil",
+      name: "Profil",
+      component: Profil,
     },
 ];
 

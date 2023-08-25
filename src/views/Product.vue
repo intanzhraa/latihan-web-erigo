@@ -47,7 +47,7 @@
         </div>
       </div>
     </article>
-
+    
     <article class="relative">
       <div class="aspect-square overflow-hidden">
         <img class="group-hover:scale-125 h-full w-full object-cover transition-all duration-300" src="../assets/jkt2.jpg" alt="" />

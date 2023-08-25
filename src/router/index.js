@@ -2,16 +2,16 @@ import { createWebHistory, createRouter } from "vue-router";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Produk from "../views/Produk.vue";
-//import SingleProduct from "../views/SingleProduct.vue";
+import SingleProduct from "../views/SingleProduct.vue";
 import Banner from "../views/Banner.vue";
 import Kontak from "../views/Kontak.vue";
 import Checkout from "../views/Checkout.vue";
-import Chard from "../views/Chard.vue";
+import Cart from "../views/Cart.vue";
 import store from "../store";
 import Merk from "../views/Merk.vue";
 import Kategori from "../views/Kategori.vue";
 //import Product from "../views/Product.vue";
-import SingleProduk from "../views/SingleProduk.vue";
+//import SingleProduk from "../views/SingleProduk.vue";
 import Profil from "../views/Profil.vue";
 
 const routes = [
@@ -37,11 +37,11 @@ const routes = [
       name: "Banner",
       component: Banner,
     },
-    // {
-    //   path: "/singleproduct2",
-    //   name: "SingleProduct",
-    //   component: SingleProduct,
-    // },
+    {
+      path: "/singleproduct",
+      name: "SingleProduct",
+      component: SingleProduct,
+    },
     {
       path: "/kontak",
       name: "Kontak",
@@ -53,9 +53,9 @@ const routes = [
       component: Checkout,
     },
     {
-      path: "/chard",
-      name: "Chard",
-      component: Chard,
+      path: "/cart",
+      name: "Cart",
+      component: Cart,
     },
     {
       path: "/merk",
@@ -77,11 +77,11 @@ const routes = [
       name: "Profil",
       component: Profil,
     },
-    {
-      path: "/singleproduk",
-      name: "SingleProduk",
-      component: SingleProduk,
-    },
+    // {
+    //   path: "/singleproduk",
+    //   name: "SingleProduk",
+    //   component: SingleProduk,
+    // },
 ];
 
 const router = createRouter({

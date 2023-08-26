@@ -245,9 +245,9 @@ export default {
 
 
       // add to cart
-      async addToCart(produkId) {
+      async addToCart(productId) {
           try {
-              await this.$store.dispatch('product/addToCart', produkId);
+              await this.$store.dispatch('product/addToCart', productId);
               this.fetchCart();
           } catch (error) {
               console.error(error);

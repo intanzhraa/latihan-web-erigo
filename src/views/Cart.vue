@@ -23,13 +23,13 @@
                   </div>
 
                   <div class="mt-4 flex items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
-                    <p class="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right">$259.00</p>
+                    <p class="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right">Rp.{{ cart.regular_price * cart.qty }}</p>
 
                     <div class="sm:order-1">
                       <div class="mx-auto flex h-8 items-stretch text-gray-600">
-                        <button class="flex items-center justify-center rounded-l-md bg-gray-200 px-4 transition hover:bg-black hover:text-white">-</button>
-                        <div class="flex w-full items-center justify-center bg-gray-100 px-4 text-xs uppercase transition">1</div>
-                        <button class="flex items-center justify-center rounded-r-md bg-gray-200 px-4 transition hover:bg-black hover:text-white">+</button>
+                        <button @click="changeQty({ cartId: cart.cart_id, typeQty: 'minus'})" class="flex items-center justify-center rounded-l-md bg-gray-200 px-4 transition hover:bg-black hover:text-white">-</button>
+                        <div class="flex w-full items-center justify-center bg-gray-100 px-4 text-xs uppercase transition">{{  cart.qty }}</div>
+                        <button @click="changeQty({ cartId: cart.cart_id, typeQty: 'plus'})" class="flex items-center justify-center rounded-r-md bg-gray-200 px-4 transition hover:bg-black hover:text-white">+</button>
                       </div>
                     </div>
                   </div>
@@ -51,16 +51,16 @@
         <div class="mt-6 border-t border-b py-2">
           <div class="flex items-center justify-between">
             <p class="text-sm text-gray-400">Subtotal</p>
-            <p class="text-lg font-semibold text-gray-900">$399.00</p>
+            <p class="text-lg font-semibold text-gray-900">Rp.{{ totalHarga }}</p>
           </div>
-          <div class="flex items-center justify-between">
+          <!-- <div class="flex items-center justify-between">
             <p class="text-sm text-gray-400">Shipping</p>
             <p class="text-lg font-semibold text-gray-900">$8.00</p>
-          </div>
+          </div> -->
         </div>
         <div class="mt-6 flex items-center justify-between">
           <p class="text-sm font-medium text-gray-900">Total</p>
-          <p class="text-2xl font-semibold text-gray-900"><span class="text-xs font-normal text-gray-400">USD</span> {{ totalHarga  }}</p>
+          <p class="text-2xl font-semibold text-gray-900"><span class="text-xs font-normal text-gray-400">Rp.</span> {{ totalHarga  }}</p>
         </div>
 
         <div class="mt-6 text-center">
@@ -86,7 +86,7 @@ export default {
     ...mapGetters('cart', ['getCart']),
     totalHarga() {
       this.total = this.getCart.reduce((acc, product) => {
-        return acc + parseFloat(product.regular_price);
+        return acc + parseFloat(product.regular_price * product.qty);
       }, 0);
       return this.total.toFixed(2);
     },
@@ -95,6 +95,12 @@ export default {
     ...mapActions('cart', ['fetchCart']),
     ...mapActions('product', ['fetchProduk']),
     ...mapActions('product', ['addToCart']),
+
+    // change
+
+    changeQty(cartId, typeQty) {
+      this.$store.dispatch('cart/changeQuantityCart', cartId, typeQty);
+    },
 
     // remove product from cart
     removeItem(cartId) {

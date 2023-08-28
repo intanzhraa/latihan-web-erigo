@@ -6,17 +6,17 @@
       <div class="mb-16 lg:my-auto lg:max-w-lg">
         <div class="mb-6 max-w-xl">
           <div>
-            <p class="bg-teal-accent-400 mb-2 inline-block rounded-full bg-blue-300 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-indigo-900">Diskon 25% di bulan Agustus ini</p>
+            <p class="bg-teal-accent-400 mb-2 inline-block rounded-full bg-blue-300 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-indigo-900">25% OFF THIS AUGUST</p>
           </div>
           <h2 class="mb-6 max-w-lg text-3xl font-extrabold text-slate-700 sm:text-5xl sm:leading-snug">
-            Selamat datang di <br />
+            Welcome To <br />
             ERIGO X
             <span class="rounded- abg-gradient-to-r inline-block bg-sky-400 from-navy-400 to-sky-400 px-2 font-bold text-white">JKT48</span>
           </h2>
           <p class="text-base text-gray-700 md:text-lg">Erigo, Everywhere You Go. Renew your clothes right now with our cool and stylish collections.</p>
         </div>
         <div class="flex items-center">
-          <a href="/produk" class="bg-sky-400a mr-6 inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-sky-400 px-8 font-medium tracking-wide text-white shadow-lg shadow-sky-300 outline-none transition duration-200 hover:scale-110 hover:bg-sky-500 focus:ring"> Mulai Belanja </a>
+          <a href="/produk" class="bg-sky-400a mr-6 inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-sky-400 px-8 font-medium tracking-wide text-white shadow-lg shadow-sky-300 outline-none transition duration-200 hover:scale-110 hover:bg-sky-500 focus:ring"> Start Shopping </a>
           <a href="https://youtu.be/OvoizAEtR0Y" class="inline-flex items-center font-semibold text-sky-400 transition-colors duration-200 hover:text-navy-400">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />

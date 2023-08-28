@@ -5,14 +5,16 @@ import Produk from "../views/Produk.vue";
 import SingleProduct from "../views/SingleProduct.vue";
 import Banner from "../views/Banner.vue";
 import Kontak from "../views/Kontak.vue";
-import Checkout from "../views/Checkout.vue";
 import Cart from "../views/Cart.vue";
 import store from "../store";
 import Merk from "../views/Merk.vue";
 import Kategori from "../views/Kategori.vue";
+import Profil from "../views/Profil.vue";
+import PageOrder from "../views/PageOrder.vue";
+import Checkout from "../views/Checkout.vue";
+// import Order from "../views/Order.vue";
 //import Product from "../views/Product.vue";
 //import SingleProduk from "../views/SingleProduk.vue";
-import Profil from "../views/Profil.vue";
 
 const routes = [
     {
@@ -20,12 +22,6 @@ const routes = [
         name: "Login",
         component: Login,
         meta: { requiresGuest: true},
-    },
-    {
-      path: "/checkout",
-      name: "Checkout",
-      component: () => import("../views/Checkout.vue"),
-      meta: { requiresLogin: true },
     },
     {
         path: "/register",
@@ -53,16 +49,18 @@ const routes = [
       name: "Kontak",
       component: Kontak,
     },
-    {
-      path: "/checkout",
-      name: "Checkout",
-      component: Checkout,
-    },
+
     {
       path: "/cart",
       name: "Cart",
       component: Cart,
     },
+    {
+      path: "/checkout",
+      name: "Checkout",
+      component: () => import("../views/Checkout.vue"),
+      meta: { requireLogin: true },
+      },
     {
       path: "/merk",
       name: "Merk",
@@ -82,6 +80,12 @@ const routes = [
       path: "/profil",
       name: "Profil",
       component: Profil,
+    },
+    {
+      path: "/order/:orderCode",
+      name: "PageOrder",
+      component: PageOrder,
+      props: true,
     },
     // {
     //   path: "/singleproduk",
@@ -110,5 +114,16 @@ router.beforeEach((to, from, next) => {
       next();
     }
   });
+
+  function cekToken(to, from, next) {
+    var isAuthenticated = false;
+    if (localStorage.getItem("token")) isAuthenticated = true;
+    else isAuthenticated = false;
+    if (isAuthenticated) {
+      next();
+    } else {
+      next("/login");
+    }
+  }
 
 export default router;

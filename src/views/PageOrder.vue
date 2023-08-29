@@ -2,10 +2,10 @@
   <div class="pt-20 bg-amber-50">
       <div class="container mx-auto px-4">
           <div class="message text-center">
-              <h1 class="text-3xl font-bold pt-10">Terimakasih Telah Memesan</h1>
-              <p>Kode Pemesanan : {{ getOrder.code }}</p>
+              <h1 class="text-3xl font-bold pt-10">Thank You for Your Order</h1>
+              <p>Order Code : {{ getOrder.code }}</p>
               <p class="italic">
-                  Terimakasih atas kepercayaan Tn./Ny. {{ getOrder.user.name }} kepada ArtisanAlley
+                thanks to Mr/Mrs. {{ getOrder.user.name }} for trusting Erigo Store
               </p>
           </div>
           <div class="mx-10 mt-10">
@@ -14,19 +14,19 @@
                       <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
                           <div class="flex flex-col pb-3">
                               <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
-                                  Kode Pemesanan :
+                                Order Code :
                               </dt>
                               <dd class="text-lg font-semibold">{{ getOrder.code }}</dd>
                           </div>
                           <div class="flex flex-col pb-3">
                               <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
-                                  Alamat Email :
+                                  Email :
                               </dt>
                               <dd class="text-lg font-semibold">{{ getOrder.user.email }}</dd>
                           </div>
                           <div class="flex flex-col py-3">
                               <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
-                                  Alamat Rumah :
+                                Payment method :
                               </dt>
                               <dd class="text-lg font-semibold">
                                   {{ getOrder.shipping_address.address }}, {{ getOrder.shipping_address.city }}, 
